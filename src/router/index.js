@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import CategoriesAll from '@/components/CategoriesAll'
+import CategoryPage from '@/components/CategoryPage'
 
 Vue.use(Router)
 
@@ -8,8 +9,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: CategoriesAll
+    },
+    {
+      path: '/category/:name',
+      name: 'category.name',
+      component: CategoryPage
     }
-  ]
+  ],
+  mode: 'history',
+  base: '/'
 })

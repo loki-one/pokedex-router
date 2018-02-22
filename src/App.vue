@@ -1,13 +1,19 @@
 <template>
-  <div id="app">
+  <div id="app" class="container text-center">
     <img id="logo" src="./assets/pokemon-logo.png">
+    <h1>{{ headline }}</h1>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data: function () {
+    return {
+      headline: 'Welcome to the Pokedex. Check the below categories for respective Pokemons!!!'
+    }
+  }
 }
 </script>
 
