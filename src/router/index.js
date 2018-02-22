@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import CategoriesAll from '@/components/CategoriesAll'
 import CategoryPage from '@/components/CategoryPage'
+import AddPokemon from '@/components/AddPokemon'
 
 Vue.use(Router)
 
@@ -15,7 +16,17 @@ export default new Router({
     {
       path: '/category/:name',
       name: 'category.name',
-      component: CategoryPage
+      props: function (route) {
+        return {
+          name: route.params.name
+        }
+      },
+      component: CategoryPage,
+      children: [{
+        path: 'pokemons/new',
+        name: 'add.pokemon',
+        component: AddPokemon
+      }]
     }
   ],
   mode: 'history',

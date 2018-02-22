@@ -7,6 +7,11 @@
         <span class="badge badge-pill">{{ pokemon.level }}</span>
       </li>
     </ul>
+    <div class="btn-group">
+      <router-link :to="{ name: 'Home' }" tag="button" class="btn btn-info" exact>Back to Categories</router-link>
+      <router-link v-if="currentCategory.name" :to="{ name: 'add.pokemon', params: {name: currentCategory.name} }" tag="button" class="btn btn-success" exact>Add Pokemon</router-link>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,6 +19,7 @@
 import {pokedex} from '../pokedex.js'
 
 export default {
+  props: ['name'],
   name: 'CategoryPage',
   data: function () {
     return {
@@ -22,7 +28,7 @@ export default {
   },
   methods: {
     isTheOne: function (category) {
-      return category.name === this.$route.params.name
+      return category.name === this.name
     }
   },
   mounted: function () {
