@@ -1,6 +1,7 @@
 # pokedex-router https://pokemon-router-busy-oribi.cfapps.io/
 
-> A Vue.js project
+> A Vue.js with Vue Router project demonstrating routing, transition, style bindings and basic Vue core functionalities.
+> Built using vue-cli 2.9.1, vue router, express and deployed on Pivotal cloudfoundry web services.
 
 ## Build Setup
 
@@ -8,8 +9,8 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# serve at localhost:5000
+node server.js
 
 # build for production with minification
 npm run build
@@ -17,8 +18,6 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## :newspaper: Deployment
 
