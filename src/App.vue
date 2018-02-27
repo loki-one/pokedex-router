@@ -2,7 +2,9 @@
   <div id="app" class="container text-center">
     <img id="logo" src="./assets/pokemon-logo.png">
     <h1>{{ headline }}</h1>
-    <router-view/>
+    <transition enter-active-class="animated fadeIn">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
