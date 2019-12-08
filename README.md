@@ -1,3 +1,5 @@
+# Note: The project is created following the steps in the book The Majesty of Vue.js 2. Deployment steps are added by me.
+
 # pokedex-router https://pokemon-router-busy-oribi.cfapps.io/
 
 > A Vue.js with Vue Router project demonstrating routing, transition, style bindings and basic Vue core functionalities.
